@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Heartera Insurance</title>
+</head>
+
+<body>
+
+    <div class="container" style="color:blue">
+        <div class="header">
+            <div class="header__logo">
+                <img class="header__logoImage" src="../static/logo.png" alt="logo" />
+            </div>
+            <div class="header__item">Add Client</div>
+            <a href="clients">
+                <div class="header__item">View Clients</div>
+            </a>
+            <a href="stats">
+                <div class="header__item">View Stats</div>
+            </a>
+            <a href="login">
+                <div class="header__item">Logout</div>
+            </a>
+        </div>
+
+        <div class="main">
+            <div class="formArea">
+                <form class="form" action="{{ url_for('predict')}}" method="post">
+                    <input id="name" name="name" class="input" placeholder="Name" type="text" required />
+                    <input id="age" name="age" class="input" placeholder="Age" type="number" required />
+                    <select id="sex" name="sex" class="input" required>
+                        <option value="" disabled selected>Gender?</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select>
+                    <input id="height" name="height" class="input" placeholder="Height (inches)" type="number" required />
+                    <input id="weight" name="weight" class="input" placeholder="Weight (pounds)" type="number" required />
+                    <input id="children" name="children" class="input" placeholder="Children" type="number" required />
+                    <select id="smoker" name="smoker" class="input" required>
+                        <option value="" disabled selected>Smoker?</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <select id="region" name="region" class="input" required>
+                        <option value="" disabled selected>Region?</option>
+                        <option value="Southwest">Southwest</option>
+                        <option value="Southeast">Southeast</option>
+                        <option value="Northwest">Northwest</option>
+                        <option value="Northeast">Northeast</option>
+                    </select>
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+                <div id="prediction" class="prediction">{{ prediction_text }}<h3>
+            </div>
+        </div>     
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>

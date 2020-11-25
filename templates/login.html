@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Heartera Insurance</title>
+</head>
+
+<body>
+
+    <div class="container" style="color:blue">
+        <div class="main">
+            <div class="formArea">
+                <form class="form" action="{{ url_for('login')}}" method="post">
+                    <input id="username" name="username" class="input" placeholder="Username" type="text" required />
+                    <input id="password" name="password" class="input" placeholder="Password" type="password" required />
+                    <button class="submit" type="submit">Login</button>
+                </form>
+                <div class="credentials">
+                    <div class="credentials__top">You can login with the following credentials:</div>
+                    <div class="credentials__main">Username: admin</div>
+                    <div class="credentials__main">Password: password</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>

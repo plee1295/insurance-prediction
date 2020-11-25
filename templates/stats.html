@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Heartera Insurance</title>
+</head>
+
+<body>
+
+    <div class="container" style="color:blue">
+
+        <div class="header">
+            <div class="header__logo">
+                <img class="header__logoImage" src="../static/logo.png" alt="logo" />
+            </div>
+            <a href="home">
+                <div class="header__item">Add Client</div>
+            </a>
+            <a href="clients">
+                <div class="header__item">View Clients</div>
+            </a>
+            <div class="header__item">View Stats</div>
+            <a href="login">
+                <div class="header__item">Logout</div>
+            </a>
+        </div>
+
+        <div class="stats__main">
+            <div class="stats__card">
+                <div class="stats__title">Gender Percentages</div>
+                <div class="total__container">
+                    <div class="data__container">
+                        <div class="data__percentage">{{ malePct }}%</div>
+                        <div class="data__info">Male</div>
+                    </div>
+                    <div class="data__container">
+                        <div class="data__percentage">{{ femalePct }}%</div>
+                        <div class="data__info">Female</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats__card">
+                <div class="stats__title">Smoker Percentages</div>
+                <div class="total__container">
+                    <div class="data__container">
+                        <div class="data__percentage">{{ smokerPct }}%</div>
+                        <div class="data__info">Smoker</div>
+                    </div>
+                    <div class="data__container">
+                        <div class="data__percentage">{{ nonSmokerPct }}%</div>
+                        <div class="data__info">Non-Smoker</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats__card">
+                <div class="stats__title">Region Percentages</div>
+                <div class="total__container">
+                    <div class="data__container">
+                        <div class="data__percentage-region">{{ northwestPercentage }}%</div>
+                        <div class="data__info-region">Northwest</div>
+                    </div>
+                    <div class="data__container">
+                        <div class="data__percentage-region">{{ northeastPercentage }}%</div>
+                        <div class="data__info-region">Northeast</div>
+                    </div>
+                    <div class="data__container">
+                        <div class="data__percentage-region">{{ southwestPercentage }}%</div>
+                        <div class="data__info-region">Southwest</div>
+                    </div>
+                    <div class="data__container">
+                        <div class="data__percentage-region">{{ southeastPercentage }}%</div>
+                        <div class="data__info-region">Southeast</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats__card">
+                <div class="stats__title">Average Age</div>
+                <div class="stats__data">{{ avgAge }}</div>
+            </div>
+            <div class="stats__card">
+                <div class="stats__title">Average BMI</div>
+                <div class="stats__data">{{ avgBmi }}</div>
+            </div>
+            <div class="stats__card">
+                <div class="stats__title">Charges</div>
+                <div class="total__container">
+                    <div class="data__container">
+                        <div class="data__percentage-charge">${{ avgCharge }}</div>
+                        <div class="data__info">Average</div>
+                    </div>
+                    <div class="data__container">
+                        <div class="data__percentage-charge">${{ chargesSum }}</div>
+                        <div class="data__info">Total</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>

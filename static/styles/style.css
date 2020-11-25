@@ -1,0 +1,216 @@
+body {
+	background-color: rgb(211, 211, 211, 0.2);
+	margin: 0px;
+	padding: 0px;
+	width: 100vw;
+}
+
+.header {
+	border-bottom: 1px solid lightgray;
+	width: 100vw;
+	height: 80px;
+	padding-left: 20px;
+	display: flex;
+	align-items: center;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+	background-color: white;
+}
+
+.header__item {
+	margin-left: 20px;
+	color: gray;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.header__item:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.header__logo {
+	display: flex;
+	align-items: center;
+	padding-left: 25px;
+}
+
+.header__logoImage {
+	height: 50px;
+	width: auto;
+}
+
+.header__logoText {
+	color: gray;
+	font-size: 32px;
+}
+
+.main {
+	padding: 30px;
+}
+
+.form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.input {
+	margin-bottom: 10px;
+	padding: 15px;
+	font-size: 16px;
+	color: gray;
+	border: 1px solid #ddd;
+}
+
+.input:focus {
+	outline: none;
+}
+
+.submit {
+	margin-top: 10px;
+	width: 100%;
+	border: none;
+	background-color: lightcoral;
+	padding: 10px;
+	color: black;
+}
+
+.formArea {
+	border: 1px solid #ddd;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	max-height: 75vh;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.prediction {
+	padding-top: 20px;
+	font-size: 24px;
+	color: black;
+	font-weight: bold;
+}
+
+.table {
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+	margin-top: 0;
+	margin-right: 25px;
+	font-size: 0.9rem;
+	min-width: 400px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	background-color: white;
+	width: 100%;
+}
+
+.table thead tr {
+	background-color: rgb(240, 128, 128);
+	color: rgba(0, 0, 0, 0.6);
+	text-align: left;
+}
+
+.table th,
+.table td {
+	padding: 12px 15px;
+}
+
+.table tbody tr {
+	border-bottom: thin solid #ddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+	background-color: rgba(240, 128, 128, 0.1);
+}
+
+.table tbody tr:last-of-type {
+	border-bottom: 3px solid rgb(240, 128, 128);
+}
+
+.tableContainer {
+	max-height: 80vh;
+	overflow-y: scroll;
+	flex: 0.7;
+}
+
+.stats__main {
+	padding: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.stats__card {
+	border: 1px solid #ddd;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	height: 120px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: space-around;
+	text-align: center;
+	margin: 30px;
+}
+
+.stats__title {
+	color: rgb(240, 128, 128);
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 32px;
+	text-align: center;
+}
+
+.total__container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.data__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.data__percentage {
+	font-size: 40px;
+	color: grey;
+}
+
+.data__info {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.data__percentage-region {
+	font-size: 26px;
+	color: gray;
+}
+
+.data__info-region {
+	color: rgba(0, 0, 0, 0.4);
+	font-size: 12px;
+}
+
+.stats__data {
+	font-size: 32px;
+	color: grey;
+}
+
+.data__percentage-charge {
+	font-size: 26px;
+	color: grey;
+}
+
+.credentials__top {
+	margin-top: 20px;
+	color: gray;
+	font-weight: bold;
+}
+
+.credentials__main {
+	margin-top: 3px;
+	color: grey;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Heartera Insurance</title>
+</head>
+
+<body>
+
+    <div class="container" style="color:blue">
+
+        <div class="header">
+            <div class="header__logo">
+                <img class="header__logoImage" src="../static/logo.png" alt="logo" />
+            </div>
+            <a href="home">
+                <div class="header__item">Add Client</div>
+            </a>
+            <div class="header__item">View Clients</div>
+            <a href="stats">
+                <div class="header__item">View Stats</div>
+            </a>
+            <a href="login">
+                <div class="header__item">Logout</div>
+            </a>
+        </div>
+
+        <div class="main">
+            <div class="tableContainer">
+                <table id="table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>BMI</th>
+                            <th>Children</th>
+                            <th>Smoker</th>
+                            <th>Region</th>
+                            <th>Charges</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for client in clients %}
+                        <tr>
+                            <td>{{client.name}}</td>
+                            <td>{{client.age}}</td>
+                            <td>{{client.sex}}</td>
+                            <td>{{client.bmi}}</td>
+                            <td>{{client.children}}</td>
+                            <td>{{client.smoker}}</td>
+                            <td>{{client.region}}</td>
+                            <td>{{client.charges}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>
